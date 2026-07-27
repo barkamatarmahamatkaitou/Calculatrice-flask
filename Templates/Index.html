@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculatrice Flask</title>
+    <style>
+        body { font-family: Arial; background: #1a1a2e; color: white; display: flex; justify-content: center; padding-top: 50px; }
+        .calc { background: #16213e; padding: 20px; border-radius: 15px; width: 300px; box-shadow: 0 0 20px #0f3460; }
+        input, select, button { width: 100%; padding: 10px; margin: 5px 0; border-radius: 8px; border: none; font-size: 16px; }
+        button { background: #0f3460; color: white; cursor: pointer; font-weight: bold; }
+        button:hover { background: #e94560; }
+        #resultat { font-size: 22px; font-weight: bold; text-align: center; margin-top: 10px; color: #00ff88; }
+    </style>
+</head>
+<body>
+    <div class="calc">
+        <h2>Calculatrice Python</h2>
+        <form method="POST">
+            <input type="number" step="any" name="a" placeholder="Nombre 1" required>
+            <input type="number" step="any" name="b" placeholder="Nombre 2" required>
+            <select name="op">
+                <option value="+">Addition +</option>
+                <option value="-">Soustraction -</option>
+                <option value="*">Multiplication *</option>
+                <option value="/">Division /</option>
+                <option value="**">Puissance ^</option>
+            </select>
+            <button type="submit">Calculer</button>
+        </form>
+        <div id="resultat">Résultat = {{ resultat }}</div>
+    </div>
+</body>
+</html>
